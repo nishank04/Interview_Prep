@@ -1,0 +1,52 @@
+//Given a picture, how would you hide/show a child picture on hovering on this parent?
+
+#parent:hover img {
+visibility:hidden
+}
+
+.parentClass:hover .child { display: none/float}
+
+//Clicking a picture to go on a different link
+
+Technique 1: Use image tag inside the anchor tag.
+
+Example:
+
+<a href=”your-link”>
+
+<img src=”your-path” >
+
+</a>
+
+Technique 2: use JavaScript onclick event.
+
+Example:
+
+<img src=”your-path” onclick="goToThisLink(‘your-link')">
+
+<script>
+
+function "goToThisLink(url) {
+
+window.location.href = url;
+
+}
+
+</script>
+
+How would you ensure the child is positioned in the top right of the parent picture?
+.parent {
+    position: relative;
+    .child { position: absolute; top: 0; right0; }
+    }
+
+
+    Using HTML and CSS, show how you would create an image that would display another image (aligned to the bottom, right) when the user hovers over the image.
+
+    CSS question is fairly easy. Given two img elements with the classes "one" and "two", you can give them the styles:
+    .two{
+    display:none;
+    }
+    .one:hover + .two{
+    display: block;
+    }
